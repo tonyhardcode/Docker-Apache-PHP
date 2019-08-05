@@ -67,7 +67,7 @@ echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR
 EXPOSE 80 443
 
 # The www directory and proxy config location
-VOLUME ["/config", "/web", "/logs"]
+VOLUME ["/config", "/web", "/logs", "/apache2"]
 
 # Add our crontab file
 ADD crons.conf /root/crons.conf
