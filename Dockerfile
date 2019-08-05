@@ -47,7 +47,7 @@ RUN \
   rm /etc/apache2/sites-available/* && \
   rm /etc/apache2/apache2.conf && \
   ln -s /config/proxy-config.conf /etc/apache2/sites-available/000-default.conf && \
-  ln -s /var/log/apache2 /logs
+  ln -s /var/log/apache2 /logs && \
   ln -s /etc/apache2 /apache2
 
 ADD proxy-config.conf /etc/apache2/000-default.conf
