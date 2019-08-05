@@ -47,8 +47,7 @@ RUN \
   rm /etc/apache2/sites-available/* && \
   rm /etc/apache2/apache2.conf && \
   ln -s /config/proxy-config.conf /etc/apache2/sites-available/000-default.conf && \
-  ln -s /var/log/apache2 /logs && \
-  ln -s /etc/apache2 /apache2
+  ln -s /var/log/apache2 /logs
 
 ADD proxy-config.conf /etc/apache2/000-default.conf
 ADD apache2.conf /etc/apache2/apache2.conf
@@ -67,7 +66,7 @@ echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR
 EXPOSE 80 443
 
 # The www directory and proxy config location
-VOLUME ["/config", "/web", "/logs", "/apache2"]
+VOLUME ["/config", "/web", "/logs"]
 
 # Add our crontab file
 ADD crons.conf /root/crons.conf
