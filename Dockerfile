@@ -36,8 +36,8 @@ RUN \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
 
-# Enable mod_rewrite
-RUN a2enmod rewrite
+# Enable mod_rewrite, mod_headers
+RUN a2enmod rewrite headers
  
 RUN \
   service apache2 restart && \
