@@ -1,4 +1,4 @@
-FROM phusion/baseimage:master
+FROM phusion/baseimage:0.9.18
 MAINTAINER nando
 
 # Set correct environment variables
